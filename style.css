@@ -204,6 +204,7 @@ body {
     gap: 16px;
     justify-content: center;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -216,6 +217,37 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+}
+
+/* Dynamic Download CV Button */
+.cv-btn {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(129, 140, 248, 0.15) 100%);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.5);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.cv-btn i {
+    animation: bounceIcon 2s infinite;
+}
+
+@keyframes bounceIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+}
+
+.cv-btn:hover {
+    background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+    color: #080c14;
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
+}
+
+.cv-btn:hover i {
+    animation: none;
 }
 
 .primary-btn {
